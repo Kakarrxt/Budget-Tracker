@@ -85,7 +85,7 @@ public class Home {
     }
     static void totalExpenditure(){
         
-        System.out.print("Enter your expenditure for this month is: "+total);
+        System.out.print("Enter your expenditure for this Month is: "+total);
         
     }
 
