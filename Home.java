@@ -1,10 +1,17 @@
+//<-----TITLE----->
+//<-----Spending Tracker----->
+
 import java.util.Scanner;
 import java.util.*;
 import java.text.SimpleDateFormat;
+import javax.swing.*;
+import javax.swing.table.*;
+import java.awt.*;
 
 interface index{
     
     public abstract String getDate();
+    public abstract String getMonth();
     
 
 }
@@ -58,6 +65,7 @@ class Home extends Exo{
     public static void setBudget(){
         System.out.print("Enter your monthly budget: ");
         monthlyBudget=sc.nextDouble();
+        
         budget=monthlyBudget;
         daily=(float) (monthlyBudget/30);
         
@@ -101,6 +109,34 @@ class Home extends Exo{
             System.out.println("You have less than 10% of budget left for the month that is "+budget);
         }
     }
+
+    static void tableSheet(){
+        int i=0;
+        JFrame frame = new JFrame();
+ 
+      String[] columnNames = {"Name", "Price", "Category","Date"};
+      
+ 
+      Object[][] data =new Object[1000][4];
+      for(i=0;i<(top+1);i++){
+        data[i][0]=list[i];
+        data[i][1]=price[i];
+        data[i][2]=catchoice[i];
+        data[i][3]=datelist[i];
+
+      }
+      
+    JTable table = new JTable(data, columnNames);
+ 
+   frame.add(table);
+   frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+   frame.setSize(400,400);
+   frame.setLocationRelativeTo(null);  
+   frame.setVisible(true);
+   }
+   
+
+    
     static void expenseSheet(){
         //exception-handling
         try{
@@ -295,6 +331,8 @@ class Home extends Exo{
 
                 case 3:
                 expenseSheet();
+                tableSheet();
+
                 
                 break;
 
@@ -384,6 +422,12 @@ catch (Exception e) {
     System.out.println("Exception is caught");
 
 }
+in.close();
 }
 }
     
+//Inhertiance 
+//Interface
+//super
+//static
+//EH
