@@ -5,18 +5,8 @@ import java.util.Scanner;
 import java.util.*;
 import java.text.SimpleDateFormat;
 import javax.swing.*;
-import javax.swing.table.*;
-import java.awt.*;
 
-interface index{
-    
-    public abstract String getDate();
-    public abstract String getMonth();
-    
-
-}
-
-class Exo implements index {
+class Exo{
     public String date;
     public Date thisDate=new Date();
     static SimpleDateFormat dateForm=new SimpleDateFormat("dd/M/Y");
@@ -426,8 +416,3 @@ in.close();
 }
 }
     
-//Inhertiance 
-//Interface
-//super
-//static
-//EH
