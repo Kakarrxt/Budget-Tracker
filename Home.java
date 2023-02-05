@@ -1,6 +1,4 @@
-//<-----TITLE----->
 //<-----Spending Tracker----->
-
 import java.util.Scanner;
 import java.util.*;
 import java.text.SimpleDateFormat;
@@ -26,11 +24,7 @@ class Exo{
 
 
     }
-    
-
-
 }
-
 
 class Home extends Exo{
     public static double budget;
@@ -113,7 +107,6 @@ class Home extends Exo{
         data[i][1]=price[i];
         data[i][2]=catchoice[i];
         data[i][3]=datelist[i];
-
       }
       
     JTable table = new JTable(data, columnNames);
@@ -124,9 +117,6 @@ class Home extends Exo{
    frame.setLocationRelativeTo(null);  
    frame.setVisible(true);
    }
-   
-
-    
     static void expenseSheet(){
         //exception-handling
         try{
@@ -153,7 +143,6 @@ class Home extends Exo{
 
     }
     
-
     static void percentage(){
         int Food=0,General=0,Medicines=0,Gifts=0,Shopping=0,travel=0,Holidays=0,Entertainment=0;
 
@@ -188,8 +177,6 @@ class Home extends Exo{
 
     }
 
-
-
     static void dailyLeft(){
         
         System.out.println("Your daily expenditure should be "+daily);
@@ -198,13 +185,10 @@ class Home extends Exo{
         
     }
 
-
     static void saving(){
         double jan=0,feb=0,mar=0,apr=0,may=0,jun=0,jul=0,aug=0,sept=0,oct=0,nov=0,dec=0;
         
         String str;
-        
-
         
         System.out.println("Your monthly savings are:");
         for(int i=0;i<(top+1);i++){
@@ -264,9 +248,7 @@ class Home extends Exo{
 
 
 
-    }
-
-    
+    }   
     static void monthlyAvg(){
         try{
         int avg=(int) (total/12);
@@ -282,14 +264,11 @@ class Home extends Exo{
         }
 
     }
-
-
     static void totalExpenditure(){
         
         System.out.print("Enter your expenditure for this Month is: "+total);
         
     }
-
 
     public static void main(String[] args) {
         int choice,choice2;
